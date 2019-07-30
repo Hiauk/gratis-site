@@ -1,5 +1,11 @@
 from template import createPage
+from distutils.dir_util import copy_tree
 import os
+
+fromDirectory = "css"
+toDirectory = "output/css"
+
+copy_tree(fromDirectory, toDirectory)
 
 for filename in os.listdir('pages'):
     with open('pages/' + filename) as f:
